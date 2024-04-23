@@ -1,0 +1,35 @@
+<body>
+
+  <div>do you consent to view this art?</div>
+  <br>
+  <button id="yes">yes</button><button id="no">no</button>
+  <div id="popup"></div>
+
+</body>
+<script>
+  let noClicked = false;
+  let popup = document.getElementById('popup');
+
+  function youCantSayNo() {
+    popup.innerText = "viewing this artwork is a mandatory part of your participation grade in this class. Please try again.";
+    noClicked = true;
+    setTimeout(function() {
+      popup.innerText = "";
+    }, 3000)
+  }
+  document.getElementById('no').addEventListener("click", function() {
+    youCantSayNo();
+  });
+  document.getElementById('yes').addEventListener("click", function() {
+    if (noClicked) {
+      popup.innerText = "that's more like it...";
+    } else {
+      popup.innerText = "good choice! :)";
+    }
+    setTimeout(function() {
+      window.location.replace("https://shawnemichaelainholloway.com/")
+    }, 3000)
+
+
+  })
+</script>
