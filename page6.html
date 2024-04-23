@@ -1,6 +1,6 @@
 <body>
 
-    <div>but do you even want to be making this art?</div>
+    <div>do you have to get your degree from this school though?</div>
     <br>
     <button id="yes">yes</button><button id="no">no</button>
     <div id="popup"></div>
@@ -11,7 +11,7 @@
     let popup = document.getElementById('popup');
   
     function youCantSayNo() {
-      popup.innerText = "making this artwork is a mandatory part of your  grade in this class. Please try again.";
+      popup.innerText = "You're really turning down this opportunity that's been handed to you on a silver platter?? Please try again.";
       noClicked = true;
       setTimeout(function() {
         popup.innerText = "";
@@ -22,12 +22,12 @@
     });
     document.getElementById('yes').addEventListener("click", function() {
       if (noClicked) {
-        popup.innerText = "I knew you did...";
+        popup.innerText = "After all, what would they say if you went back home?";
       } else {
-        popup.innerText = "yay! art! :D";
+        popup.innerText = "wow! you must be really smart :)";
       }
       setTimeout(function() {
-        window.location.href = ("page3.html");
+        window.location.href = ("page7.html");
       }, 3000);
   
   
